@@ -1,4 +1,4 @@
-package code.ca.bcit.comp2522.fantasy;
+package ca.bcit.comp2522.fantasy;
 
 /**
  * Represents a specific date

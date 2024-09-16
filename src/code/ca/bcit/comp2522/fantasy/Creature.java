@@ -1,4 +1,4 @@
-package code.ca.bcit.comp2522.fantasy;
+package ca.bcit.comp2522.fantasy;
 
 /**
  * It is a super class, it will represent a fantasy creature
@@ -9,7 +9,7 @@ package code.ca.bcit.comp2522.fantasy;
 public class Creature {
     private final String name;
     private final Date dateOfBirth;
-    private int health;
+    public int health;
 
     private final static int MAX_HEALTH = 100;
     private final static int MIN_HEALTH = 0;
