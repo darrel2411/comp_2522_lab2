@@ -1,5 +1,12 @@
 package ca.bcit.comp2522.fantasy;
 
+/**
+ * Creates Orc subclass from Creature.
+ *
+ * @author Darrel Tapilaha
+ * @version 1.0
+ */
+
 public class Orc extends Creature {
     private int rage;
 
@@ -26,6 +33,9 @@ public class Orc extends Creature {
         this.rage = rage;
     }
 
+    /*
+    validate rage input to be within limits
+     */
     private static void validateRage(final int rage) {
         if(rage < MIN_RAGE ||
                 rage > MAX_RAGE) {
@@ -34,6 +44,9 @@ public class Orc extends Creature {
         }
     }
 
+    /*
+    berserk method use to attack other creature
+     */
     private void berserk(final Creature target) {
         rage += 5;
         if(this.rage < REDUCED_RAGE) {
@@ -56,7 +69,7 @@ public class Orc extends Creature {
         StringBuilder str;
         str = new StringBuilder();
         str.append(super.getDetails());
-        str.append("Rage Power: " + this.rage);
+        str.append("\nRage Power: " + this.rage);
         return str.toString();
     }
 }

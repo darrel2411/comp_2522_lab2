@@ -1,5 +1,12 @@
 package ca.bcit.comp2522.fantasy;
 
+/**
+ * Creates Dragon subclass from Creature.
+ *
+ * @author Darrel.
+ * @version 1.0
+ */
+
 public class Dragon extends Creature{
 
     private int firePower;
@@ -24,6 +31,9 @@ public class Dragon extends Creature{
         this.health = health;
     }
 
+    /*
+    validate the input fire power within limits.
+     */
     private static void validateFirePower(final int firePower) {
         if(firePower < MIN_POWER ||
             firePower > MAX_POWER)
@@ -33,6 +43,10 @@ public class Dragon extends Creature{
         }
     }
 
+    /**
+     * Breathe fire method use to attack other creature.
+     * @param target = creature to be hit
+     */
     public void breatheFire(final Creature target) {
         if(this.firePower < REDUCED_POWER){
             throw new LowFirePowerException("Fire power is too low");
@@ -42,6 +56,10 @@ public class Dragon extends Creature{
         }
     }
 
+    /**
+     * Restore fire power method for the dragon.
+     * @param restorePower = input restore fire power
+     */
     public void restoreFirePower(final int restorePower) {
         final int totalPower ;
         totalPower = this.firePower + restorePower;
@@ -61,7 +79,7 @@ public class Dragon extends Creature{
         StringBuilder str;
         str = new StringBuilder();
         str.append(super.getDetails());
-        str.append("Fire Power: " + this.firePower);
+        str.append("\nFire Power: " + this.firePower);
         return str.toString();
     }
 }

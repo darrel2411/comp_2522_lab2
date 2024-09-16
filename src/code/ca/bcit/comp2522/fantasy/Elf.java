@@ -1,5 +1,12 @@
 package ca.bcit.comp2522.fantasy;
 
+/**
+ * Creates Elf subclass from Creature.
+ *
+ * @author Darrel Tapilaha.
+ * @version 1.0
+ */
+
 public class Elf extends Creature {
     private int mana;
 
@@ -26,6 +33,9 @@ public class Elf extends Creature {
         this.mana = mana;
     }
 
+    /*
+     validate the input mana within limits
+     */
     private static void validateMana(final int mana) {
         if(mana < MIN_MANA ||
            mana > MAX_MANA) {
@@ -34,6 +44,10 @@ public class Elf extends Creature {
         }
     }
 
+    /**
+     * Cast spell method use to give damage to target.
+     * @param target = the target to be hit
+     */
     public void castSpell(final Creature target) {
         if(this.mana < REDUCED_MANA){
             throw new LowManaException("Mana is too low");
@@ -43,6 +57,10 @@ public class Elf extends Creature {
         }
     }
 
+    /**
+     * Restore mana of the elf method.
+     * @param restoreMana = incoming mana to restore
+     */
     public void restoreMana(final int restoreMana) {
         final int totalPower ;
         totalPower = this.mana + restoreMana;
@@ -62,7 +80,7 @@ public class Elf extends Creature {
         StringBuilder str;
         str = new StringBuilder();
         str.append(super.getDetails());
-        str.append("Mana Power: " + this.mana);
+        str.append("\nMana Power: " + this.mana);
         return str.toString();
     }
 
