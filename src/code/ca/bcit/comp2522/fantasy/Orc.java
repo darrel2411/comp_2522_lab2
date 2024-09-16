@@ -51,7 +51,7 @@ public class Orc extends Creature {
     public void berserk(final Creature target) {
         rage += 5;
         if(this.rage < REDUCED_RAGE) {
-            throw new LowManaException("Rage is too low");
+            throw new LowRageException("Rage is too low");
         } else {
             if(this.rage > TWENTY){
                 target.takeDamage(MAX_RAGE);

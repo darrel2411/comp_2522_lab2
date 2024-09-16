@@ -47,7 +47,7 @@ public class Dragon extends Creature{
      * Breathe fire method use to attack other creature.
      * @param target = creature to be hit
      */
-    public void breatheFire(final Creature target) {
+    public void breatheFire(final Creature target) throws LowFirePowerException {
         if(this.firePower < REDUCED_POWER){
             throw new LowFirePowerException("Fire power is too low");
         } else {
