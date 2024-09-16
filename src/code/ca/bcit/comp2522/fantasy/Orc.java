@@ -44,10 +44,11 @@ public class Orc extends Creature {
         }
     }
 
-    /*
-    berserk method use to attack other creature
+    /**
+     * Berserk method use to attack a creature.
+     * @param target = target creature
      */
-    private void berserk(final Creature target) {
+    public void berserk(final Creature target) {
         rage += 5;
         if(this.rage < REDUCED_RAGE) {
             throw new LowManaException("Rage is too low");

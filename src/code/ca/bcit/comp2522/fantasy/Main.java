@@ -60,8 +60,7 @@ public class Main {
 
 
         if(ragavan instanceof Elf) {
-            System.out.println("in here");
-            Elf ragavanElf;
+            final Elf ragavanElf;
             ragavanElf = (Elf) ragavan;
             System.out.println(drogol.getDetails());
             System.out.println(ragavanElf.getDetails());
@@ -69,6 +68,28 @@ public class Main {
             System.out.println(ragavanElf.getDetails());
             System.out.println(drogol.getDetails());
         }
+
+        if(goblin instanceof Orc) {
+            final Orc goblinOrc;
+            goblinOrc = (Orc) goblin;
+            System.out.println(drogol.getDetails());
+            System.out.println(goblinOrc.getDetails());
+            goblinOrc.berserk(drogol);
+            System.out.println(goblinOrc.getDetails());
+            System.out.println(drogol.getDetails());
+        }
+
+        if(drogol instanceof Dragon) {
+            final Dragon drogolDragon;
+            drogolDragon = (Dragon) drogol;
+            System.out.println(goblin.getDetails());
+            System.out.println(drogolDragon.getDetails());
+            drogolDragon.breatheFire(goblin);
+            System.out.println(drogolDragon.getDetails());
+            System.out.println(goblin.getDetails());
+        }
+
+
 
     }
 }
