@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="567abfbf-d92e-4c67-a5a2-b4c98b4d85f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Creature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/DamageException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Date.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/HealingException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +38,10 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/manasesvillalobos/Documents/CST/Term 2/COMP2522 Java 2/Lab2 git/comp_2522_lab2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -67,6 +67,8 @@
       <workItem from="1726249402495" duration="269000" />
       <workItem from="1726249681747" duration="1339000" />
       <workItem from="1726251896117" duration="3000" />
+      <workItem from="1726252045159" duration="440000" />
+      <workItem from="1726256341963" duration="18000" />
     </task>
     <servers />
   </component>
