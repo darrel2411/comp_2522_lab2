@@ -19,19 +19,22 @@ public class Main {
         final Creature drogol;
 
         dobDrogol   = new Date(1990, 11, 20);
-        drogol      = new Dragon("Drogol", dobDrogol, 100, 98);
+        drogol      = new Dragon("Drogol", dobDrogol,
+                                100, 98);
 
         final Date dobRagavan;
         final Creature ragavan;
 
         dobRagavan  = new Date(2021, 12, 22);
-        ragavan     = new Elf("Ragavan", dobRagavan, 85, 20);
+        ragavan     = new Elf("Ragavan", dobRagavan,
+                                85, 20);
 
         final Date dobGoblin;
         final Creature goblin;
 
         dobGoblin   = new Date(2013, 4, 12);
-        goblin      = new Orc("Goblin", dobGoblin, 64, 25);
+        goblin      = new Orc("Goblin", dobGoblin,
+                                64, 25);
 
 ////        the dragon
 //        System.out.println(drogol instanceof Creature);
@@ -72,6 +75,8 @@ public class Main {
             catch(LowManaException e){
                 // Printing a friendly message instead
                 System.out.println(e.getMessage());
+            } catch (DamageException e){
+                System.out.println(e.getMessage());
             }
 
             System.out.println(ragavanElf.getDetails());
@@ -91,6 +96,11 @@ public class Main {
             }
             catch(LowRageException e){
                 // Printing a friendly message instead
+                // If the rage is low
+                System.out.println(e.getMessage());
+            }
+            catch (DamageException e){
+                // If the target creature has died
                 System.out.println(e.getMessage());
             }
 
@@ -111,6 +121,9 @@ public class Main {
             catch (LowFirePowerException e){
                 // To avoid unchecked exceptions from crashing
                 // the program
+                System.out.println(e.getMessage());
+            } catch (DamageException e){
+                // If the target creature has died
                 System.out.println(e.getMessage());
             }
 

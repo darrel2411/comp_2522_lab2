@@ -20,7 +20,9 @@ public class Creature {
      * @param name represents the name of the creature
      * @param dateOfBirth represents the date of birth of the creature
      */
-    public Creature(final String name, final Date dateOfBirth) {
+    public Creature(final String name,
+                    final Date dateOfBirth)
+    {
         this.name = validateString(name);
         this.dateOfBirth = dateOfBirth;
         this.health = MAX_HEALTH;
