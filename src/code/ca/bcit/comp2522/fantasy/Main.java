@@ -65,6 +65,7 @@ public class Main {
         if(ragavan instanceof Elf) {
             final Elf ragavanElf;
             ragavanElf = (Elf) ragavan;
+            System.out.println("Elf Information");
             System.out.println(drogol.getDetails());
             System.out.println(ragavanElf.getDetails());
             // To avoid unchecked exceptions from crashing
@@ -81,11 +82,13 @@ public class Main {
 
             System.out.println(ragavanElf.getDetails());
             System.out.println(drogol.getDetails());
+            System.out.println();
         }
 
         if(goblin instanceof Orc) {
             final Orc goblinOrc;
             goblinOrc = (Orc) goblin;
+            System.out.println("Orc Information");
             System.out.println(drogol.getDetails());
             System.out.println(goblinOrc.getDetails());
 
@@ -106,11 +109,13 @@ public class Main {
 
             System.out.println(goblinOrc.getDetails());
             System.out.println(drogol.getDetails());
+            System.out.println();
         }
 
         if(drogol instanceof Dragon) {
             final Dragon drogolDragon;
             drogolDragon = (Dragon) drogol;
+            System.out.println("Dragon Information");
             System.out.println(goblin.getDetails());
             System.out.println(drogolDragon.getDetails());
             // To avoid unchecked exceptions from crashing
@@ -129,6 +134,7 @@ public class Main {
 
             System.out.println(drogolDragon.getDetails());
             System.out.println(goblin.getDetails());
+            System.out.println();
         }
 
 

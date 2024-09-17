@@ -18,7 +18,8 @@ public class Creature {
     /**
      * It creates a creature object.
      * @param name represents the name of the creature
-     * @param dateOfBirth represents the date of birth of the creature
+     * @param dateOfBirth represents the date of birth of
+     *                    the creature
      */
     public Creature(final String name,
                     final Date dateOfBirth)
@@ -46,20 +47,23 @@ public class Creature {
         health -= damage;
         if(health < MIN_HEALTH){
             health = MIN_HEALTH;
-            throw new DamageException("Severe Damage! " + this.name + " has died.");
+            throw new DamageException("Severe Damage! " +
+                                        this.name + " has died.");
         }
     }
 
 
     /**
      * It will affect the health positively
-     * @param healthAmount represents the amount of health the creature will receive.
+     * @param healthAmount represents the amount of health
+     *                     the creature will receive.
      */
     public void heal(final int healthAmount) {
         health += healthAmount;
         if (health > MAX_HEALTH){
             health = MAX_HEALTH;
-            throw new HealingException("Health exceeds the maximum amount!");
+            throw new HealingException("Health exceeds the " +
+                                            "maximum amount!");
         }
     }
 
@@ -78,19 +82,22 @@ public class Creature {
      * @return a string with the information about the creature
      */
     public String getDetails(){
-        return "Name: " + name + "\nDate of Birth: " + dateOfBirth.getYyyyMmDd() +
-                "\nAge: " + getAgeYears() + "\nHealth: " + health;
+        return "Name: " + name + "\nDate of Birth: " +
+                dateOfBirth.getYyyyMmDd() + "\nAge: " +
+                getAgeYears() + "\nHealth: " + health;
     }
 
     /*
     It will validate if a string is null or empty,
-    and it will throw and illegal argument exception if that is the case.
+    and it will throw and illegal argument exception if
+    that is the case.
      */
     private static String validateString(final String str) {
         // verify if the string is empty or null
         if (str == null || str.isEmpty()) {
             // if so it will throw an illegal argument exception
-            throw new IllegalArgumentException("Name cannot be null or empty");
+            throw new IllegalArgumentException(
+                                "Name cannot be null or empty");
         }
 
         return str;

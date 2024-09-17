@@ -34,7 +34,8 @@ public class Dragon extends Creature{
     /*
     validate the input fire power within limits.
      */
-    private static void validateFirePower(final int firePower) {
+    private static void validateFirePower(final int firePower)
+    {
         if(firePower < MIN_POWER ||
             firePower > MAX_POWER)
         {
@@ -47,7 +48,9 @@ public class Dragon extends Creature{
      * Breathe fire method use to attack other creature.
      * @param target = creature to be hit
      */
-    public void breatheFire(final Creature target) throws LowFirePowerException {
+    public void breatheFire(final Creature target)
+            throws LowFirePowerException
+    {
         if(this.firePower < REDUCED_POWER){
             throw new LowFirePowerException("Fire power is too low");
         } else {
@@ -60,7 +63,8 @@ public class Dragon extends Creature{
      * Restore fire power method for the dragon.
      * @param restorePower = input restore fire power
      */
-    public void restoreFirePower(final int restorePower) {
+    public void restoreFirePower(final int restorePower)
+    {
         final int totalPower ;
         totalPower = this.firePower + restorePower;
         if(totalPower > MAX_POWER){
