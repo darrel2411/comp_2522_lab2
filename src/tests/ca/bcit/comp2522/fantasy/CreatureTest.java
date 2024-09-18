@@ -7,7 +7,7 @@ package ca.bcit.comp2522.fantasy;
  * @version 1.0
  */
 
-public class Main {
+public class CreatureTest {
 
     /**
      * Drives the program
@@ -20,21 +20,21 @@ public class Main {
 
         dobDrogol   = new Date(2020, 11, 20);
         drogol      = new Dragon("Drogol", dobDrogol,
-                                90, 98);
+                90, 98);
 
         final Date dobRagavan;
         final Creature ragavan;
 
         dobRagavan  = new Date(2021, 12, 22);
         ragavan     = new Elf("Ragavan", dobRagavan,
-                                85, 20);
+                85, 20);
 
         final Date dobGoblin;
         final Creature goblin;
 
         dobGoblin   = new Date(2013, 4, 12);
         goblin      = new Orc("Goblin", dobGoblin,
-                                64, 25);
+                64, 25);
 
         //Healer Creature(Bonus question)
         final Creature healer;
