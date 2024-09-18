@@ -1,5 +1,7 @@
 package ca.bcit.comp2522.fantasy;
 
+import java.time.LocalDate;
+
 /**
  * It is a super class, it will represent a fantasy creature
  *
@@ -25,7 +27,7 @@ public class Creature {
                     final Date dateOfBirth)
     {
         this.name = validateString(name);
-        this.dateOfBirth = dateOfBirth;
+        this.dateOfBirth = isDateFuture(dateOfBirth);
         this.health = MAX_HEALTH;
 
     }
@@ -101,5 +103,43 @@ public class Creature {
         }
 
         return str;
+    }
+
+    /*
+    it will validate if a date is in the future, if it is
+    it will throw illegal argument exception.
+     */
+    private static Date isDateFuture(final Date date){
+        // An object with today's date
+        LocalDate myObj = LocalDate.now();
+
+        int dayBorn = date.getDay();
+        int today = myObj.getDayOfMonth();
+
+        int monthBorn = date.getMonth();
+        int currentMonth = myObj.getMonthValue();
+
+        int yearBorn = date.getYear();
+        int currentYear = myObj.getYear();
+
+        // Verify if the date is in the future
+        if (yearBorn > currentYear) {
+            throw new IllegalArgumentException(
+                            "Year cannot be in the future");
+        }
+        else if (yearBorn == currentYear &&  monthBorn > currentMonth) {
+            throw new IllegalArgumentException(
+                            "Month cannot be in the future");
+        }
+        else if (yearBorn == currentYear &&
+                   monthBorn == currentMonth &&
+                   dayBorn > today)
+        {
+            throw new IllegalArgumentException(
+                            "Day cannot be in the future");
+        }
+
+
+        return date;
     }
 }
