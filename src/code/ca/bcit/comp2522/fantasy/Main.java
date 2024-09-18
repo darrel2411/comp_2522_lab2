@@ -18,9 +18,9 @@ public class Main {
         final Date dobDrogol;
         final Creature drogol;
 
-        dobDrogol   = new Date(1990, 11, 20);
+        dobDrogol   = new Date(2020, 11, 20);
         drogol      = new Dragon("Drogol", dobDrogol,
-                                100, 98);
+                                90, 98);
 
         final Date dobRagavan;
         final Creature ragavan;
@@ -35,6 +35,16 @@ public class Main {
         dobGoblin   = new Date(2013, 4, 12);
         goblin      = new Orc("Goblin", dobGoblin,
                                 64, 25);
+
+        //Healer Creature(Bonus question)
+        final Creature healer;
+        final Date healerDob;
+
+        healerDob = new Date(2020, 3, 14);
+        healer = new CreatureHealer("Healer", healerDob);
+
+
+
 
 ////        the dragon
 //        System.out.println(drogol instanceof Creature);
@@ -135,6 +145,25 @@ public class Main {
             System.out.println(drogolDragon.getDetails());
             System.out.println(goblin.getDetails());
             System.out.println();
+        }
+
+        if (healer instanceof CreatureHealer) {
+            System.out.println("Dragon Information");
+            System.out.println("Healer creature");
+            System.out.println(healer.getDetails());
+
+            System.out.println("\nTarget to heal");
+            System.out.println(drogol.getDetails());
+
+            System.out.println("\nAttempting to heal");
+
+            try
+            {
+                ((CreatureHealer) healer).healCreature(drogol);
+            }
+            catch (HealingException e){
+                System.out.println(e.getMessage());
+            }
         }
 
 

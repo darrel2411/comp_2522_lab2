@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class CreatureHealer  extends Creature {
 
+    private static final int ZERO = 0;
+    private static final int MAX_HEALTH = 100;
+
     /**
      * Constructor for the object
      * @param name represents the name of the creature
@@ -21,15 +24,17 @@ public class CreatureHealer  extends Creature {
 
         // Generates a random number and store it
         // in the variable healingAmount
-        int healingAmount = generator.nextInt();
+        int healingAmount = generator.nextInt(MAX_HEALTH);
 
 
-        if(healingAmount < 0){
+        if(healingAmount < ZERO){
             // when the healing amount applied is a negative
             // an exception will be thrown
             throw new HealingException(
-                            "healingAmount cannot be negative");
+                            "healingAmount cannot be negative!" +
+                            "\nHealingAmount is " + healingAmount);
         } else{
+            System.out.println("Healing amount is: " + healingAmount);
             target.heal(healingAmount);
         }
 
