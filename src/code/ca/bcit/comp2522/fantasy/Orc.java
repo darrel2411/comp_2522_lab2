@@ -3,7 +3,8 @@ package ca.bcit.comp2522.fantasy;
 /**
  * Creates Orc subclass from Creature.
  *
- * @author Darrel Tapilaha
+ * @author Manases Villalobos
+ * @author Darrel Tapilaha.
  * @version 1.0
  */
 

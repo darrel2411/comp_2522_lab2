@@ -3,6 +3,7 @@ package ca.bcit.comp2522.fantasy;
 /**
  * Creates Elf subclass from Creature.
  *
+ * @author Manases Villalobos
  * @author Darrel Tapilaha.
  * @version 1.0
  */

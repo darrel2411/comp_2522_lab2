@@ -3,7 +3,8 @@ package ca.bcit.comp2522.fantasy;
 /**
  * Represents a specific date
  *
- * @author Manases
+ * @author Manases Villalobos
+ * @author Darrel Tapilaha.
  * @version 1.0
  */
 public class Date {

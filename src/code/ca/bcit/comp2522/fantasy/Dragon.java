@@ -3,7 +3,8 @@ package ca.bcit.comp2522.fantasy;
 /**
  * Creates Dragon subclass from Creature.
  *
- * @author Darrel.
+ * @author Manases Villalobos
+ * @author Darrel Tapilaha.
  * @version 1.0
  */
 

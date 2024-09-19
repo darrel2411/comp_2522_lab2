@@ -1,4 +1,11 @@
 package ca.bcit.comp2522.fantasy;
+/**
+ * A creature that can heal other creatures.
+ *
+ * @author Manases
+ * @author Darrel Tapilaha
+ * @version 1.0
+ */
 
 import java.util.Random;
 
@@ -20,6 +27,11 @@ public class CreatureHealer  extends Creature {
         super.setHealth(health);
     }
 
+    /**
+     * Heals a target creature.
+     *
+     * @param target the creature to be healed
+     */
     public void healCreature(Creature target){
         // Starts a random object
         Random generator = new Random();

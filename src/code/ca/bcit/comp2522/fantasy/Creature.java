@@ -5,7 +5,8 @@ import java.time.LocalDate;
 /**
  * It is a super class, it will represent a fantasy creature
  *
- * @author Manases
+ * @author Manases Villalobos
+ * @author Darrel Tapilaha.
  * @version 1.0
  */
 public class Creature {
