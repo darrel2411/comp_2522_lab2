@@ -8,7 +8,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Creature.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/CreatureHealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/CreatureHealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Elf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Elf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Orc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ca/bcit/comp2522/fantasy/Orc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/ca/bcit/comp2522/fantasy/CreatureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ca/bcit/comp2522/fantasy/CreatureTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +40,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CreatureTest.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "bonusQ__M",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/manasesvillalobos/Documents/CST/Term 2/COMP2522 Java 2/Lab2 git/comp_2522_lab2",
     "node.js.detected.package.eslint": "true",
@@ -72,6 +77,7 @@
       <workItem from="1726603516465" duration="2108000" />
       <workItem from="1726673863364" duration="8000" />
       <workItem from="1726677185972" duration="418000" />
+      <workItem from="1726709491261" duration="1906000" />
     </task>
     <servers />
   </component>

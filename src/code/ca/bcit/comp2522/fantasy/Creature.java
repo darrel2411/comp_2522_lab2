@@ -9,9 +9,11 @@ import java.time.LocalDate;
  * @version 1.0
  */
 public class Creature {
+
+
     private final String name;
     private final Date dateOfBirth;
-    public int health;
+    private int health;
 
     private final static int MAX_HEALTH = 100;
     private final static int MIN_HEALTH = 0;
@@ -28,8 +30,31 @@ public class Creature {
     {
         this.name = validateString(name);
         this.dateOfBirth = isDateFuture(dateOfBirth);
-        this.health = MAX_HEALTH;
+    }
 
+    /**
+     * It will set the health of the creature
+     * @param health to represent the health of
+     *               the creature
+     */
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    /**
+     * It will return the name of the creature
+     * @return name as a string
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * It will return the name of the creature
+     * @return name as a string
+     */
+    public int getHealth() {
+        return this.health;
     }
 
     /**

@@ -28,8 +28,8 @@ public class Orc extends Creature {
                final int health,
                final int rage) {
         super(name, dateOfBirth);
+        super.setHealth(health);
         validateRage(rage);
-        this.health = health;
         this.rage = rage;
     }
 
@@ -55,6 +55,10 @@ public class Orc extends Creature {
         } else {
             if(this.rage > TWENTY){
                 target.takeDamage(MAX_RAGE);
+                System.out.println("Berserk applied to " + target.getName() +
+                                   "! Health is now " + target.getHealth() +
+                                   "\n" + super.getName() + "'s rage is now " +
+                                   this.rage);
             } else {
                 target.takeDamage(this.rage);
             }

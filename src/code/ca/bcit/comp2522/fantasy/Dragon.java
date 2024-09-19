@@ -28,7 +28,7 @@ public class Dragon extends Creature{
         super(name, dateOfBirth);
         validateFirePower(firePower);
         this.firePower = firePower;
-        this.health = health;
+        super.setHealth(health);
     }
 
     /*
@@ -56,6 +56,10 @@ public class Dragon extends Creature{
         } else {
             this.firePower -= REDUCED_POWER;
             target.takeDamage(DAMAGE_GIVEN);
+            System.out.println (target.getName() + " burned" +
+                                "! Health is now " + target.getHealth() +
+                                "\n" + super.getName() + "'s fire power is now " +
+                                 this.firePower);
         }
     }
 

@@ -41,7 +41,8 @@ public class CreatureTest {
         final Date healerDob;
 
         healerDob = new Date(2020, 3, 14);
-        healer = new CreatureHealer("Healer", healerDob);
+        healer = new CreatureHealer("Healer", healerDob,
+                                   80);
 
 
 
@@ -76,8 +77,9 @@ public class CreatureTest {
             final Elf ragavanElf;
             ragavanElf = (Elf) ragavan;
             System.out.println("Elf Information");
+
+            // Will get the details of the elf
             System.out.println(drogol.getDetails());
-            System.out.println(ragavanElf.getDetails());
             // To avoid unchecked exceptions from crashing
             // the program
             try{
@@ -89,9 +91,6 @@ public class CreatureTest {
             } catch (DamageException e){
                 System.out.println(e.getMessage());
             }
-
-            System.out.println(ragavanElf.getDetails());
-            System.out.println(drogol.getDetails());
             System.out.println();
         }
 
@@ -99,7 +98,8 @@ public class CreatureTest {
             final Orc goblinOrc;
             goblinOrc = (Orc) goblin;
             System.out.println("Orc Information");
-            System.out.println(drogol.getDetails());
+
+            // to print the details of the orc
             System.out.println(goblinOrc.getDetails());
 
             // To avoid unchecked exceptions from crashing
@@ -117,8 +117,6 @@ public class CreatureTest {
                 System.out.println(e.getMessage());
             }
 
-            System.out.println(goblinOrc.getDetails());
-            System.out.println(drogol.getDetails());
             System.out.println();
         }
 
@@ -126,7 +124,6 @@ public class CreatureTest {
             final Dragon drogolDragon;
             drogolDragon = (Dragon) drogol;
             System.out.println("Dragon Information");
-            System.out.println(goblin.getDetails());
             System.out.println(drogolDragon.getDetails());
             // To avoid unchecked exceptions from crashing
             // the program
@@ -142,20 +139,12 @@ public class CreatureTest {
                 System.out.println(e.getMessage());
             }
 
-            System.out.println(drogolDragon.getDetails());
-            System.out.println(goblin.getDetails());
             System.out.println();
         }
 
         if (healer instanceof CreatureHealer) {
-            System.out.println("Dragon Information");
             System.out.println("Healer creature");
             System.out.println(healer.getDetails());
-
-            System.out.println("\nTarget to heal");
-            System.out.println(drogol.getDetails());
-
-            System.out.println("\nAttempting to heal");
 
             try
             {

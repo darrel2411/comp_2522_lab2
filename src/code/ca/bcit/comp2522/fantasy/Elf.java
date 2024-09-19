@@ -28,8 +28,9 @@ public class Elf extends Creature {
                final int health,
                final int mana) {
         super(name, dateOfBirth);
+        super.setHealth(health);
+
         validateMana(mana);
-        this.health = health;
         this.mana = mana;
     }
 
@@ -53,7 +54,11 @@ public class Elf extends Creature {
             throw new LowManaException("Mana is too low");
         } else {
             this.mana -= REDUCED_MANA;
+
             target.takeDamage(DAMAGE_GIVEN);
+            System.out.println("Casting a spell to " + target.getName() +
+                    "! Health is now " + target.getHealth() + "\n" +
+                    super.getName() + "'s mana is now " + this.mana);
         }
     }
 
