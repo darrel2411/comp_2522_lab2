@@ -12,7 +12,7 @@ public class Orc extends Creature {
     private int rage;
 
     private static final int MAX_RAGE = 30;
-    private static final int TWENTY = 20;
+    private static final int SPECIAL_CASE_RAGE = 20;
     private static final int MIN_RAGE = 0;
     private final static int REDUCED_RAGE = 5;
 
@@ -54,7 +54,7 @@ public class Orc extends Creature {
         if(this.rage < REDUCED_RAGE) {
             throw new LowRageException("Rage is too low");
         } else {
-            if(this.rage > TWENTY){
+            if(this.rage > SPECIAL_CASE_RAGE){
                 target.takeDamage(MAX_RAGE);
                 System.out.println("Berserk applied to " + target.getName() +
                                    "! Health is now " + target.getHealth() +

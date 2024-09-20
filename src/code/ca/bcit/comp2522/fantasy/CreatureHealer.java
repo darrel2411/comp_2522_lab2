@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class CreatureHealer  extends Creature {
 
-    private static final int ZERO = 0;
+    private static final int INVALID_HEATH_AMOUNT = 0;
     private static final int MAX_HEALTH = 100;
 
     /**
@@ -44,7 +44,7 @@ public class CreatureHealer  extends Creature {
         System.out.println("Attempting to heal " + target.getName());
         System.out.println("Healing amount applied will be " + healingAmount);
 
-        if(healingAmount < ZERO){
+        if(healingAmount < INVALID_HEATH_AMOUNT){
             // when the healing amount applied is a negative
             // an exception will be thrown
             throw new HealingException(

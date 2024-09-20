@@ -11,7 +11,6 @@ import java.time.LocalDate;
  */
 public class Creature {
 
-
     private final String name;
     private final Date dateOfBirth;
     private int health;
@@ -151,18 +150,18 @@ public class Creature {
         // Verify if the date is in the future
         if (yearBorn > currentYear) {
             throw new IllegalArgumentException(
-                            "Year cannot be in the future");
+                            "Year cannot be in the future. Year entered was " + yearBorn);
         }
         else if (yearBorn == currentYear &&  monthBorn > currentMonth) {
             throw new IllegalArgumentException(
-                            "Month cannot be in the future");
+                            "Month cannot be in the future. Month entered was " + monthBorn);
         }
         else if (yearBorn == currentYear &&
                    monthBorn == currentMonth &&
                    dayBorn > today)
         {
             throw new IllegalArgumentException(
-                            "Day cannot be in the future");
+                            "Day cannot be in the future. Day entered was " + dayBorn);
         }
 
 
