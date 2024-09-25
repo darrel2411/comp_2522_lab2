@@ -152,10 +152,13 @@ public class Creature {
             throw new IllegalArgumentException(
                             "Year cannot be in the future. Year entered was " + yearBorn);
         }
+        // If the year born is same as the current year, then check if the month is in the future
         else if (yearBorn == currentYear &&  monthBorn > currentMonth) {
             throw new IllegalArgumentException(
                             "Month cannot be in the future. Month entered was " + monthBorn);
         }
+        // If the year born and month born are same as the current month and year
+        // then verify that the day is not in the future
         else if (yearBorn == currentYear &&
                    monthBorn == currentMonth &&
                    dayBorn > today)

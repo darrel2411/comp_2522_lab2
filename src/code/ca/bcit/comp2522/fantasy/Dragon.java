@@ -33,7 +33,7 @@ public class Dragon extends Creature{
     }
 
     /*
-    validate the input fire power within limits.
+     * validate the input fire power within limits.
      */
     private static void validateFirePower(final int firePower)
     {
